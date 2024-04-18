@@ -69,7 +69,7 @@ async function handleSubmit(e) {
     elements,
     confirmParams: {
       // Make sure to change this to your payment completion page
-      return_url: "https://yu-demo.tunnel.stripe.me/",
+      return_url: "https://stripe-element.onrender.com/",
     },
   });
 
