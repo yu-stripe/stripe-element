@@ -30,7 +30,7 @@ async function initialize() {
   const appearance = {
     theme: 'stripe',
   };
-  const externalPaymentMethodTypes =  ['external_paypay', 'external_paidy', 'external_rakuten_pay'];
+  const externalPaymentMethodTypes =  ['external_paypal', 'external_paidy', 'external_rakuten_pay'];
   elements = stripe.elements({ appearance, clientSecret, externalPaymentMethodTypes });
 
   const paymentElementOptions = {
