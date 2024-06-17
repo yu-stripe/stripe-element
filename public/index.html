@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
     <script src="https://js.stripe.com/v3/"></script>
-    <!-- Stripe Payment Integration: Your custom JavaScript code -->
     <script src="checkout.js" defer></script>
     <title>架空のショップ | サンプルECサイト</title>
     <meta charset="UTF-8">
@@ -11,6 +10,91 @@
     <meta name="description" content="架空のショップ">
     <meta name="keywords" content="EC, ショップ, サンプル">
     <meta name="csrf" content="csrf_token||example123">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .page-checkout {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .checkout-header,
+        .checkout-footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+        .checkout-main {
+            padding: 20px;
+        }
+        .checkout-summary {
+            margin-bottom: 20px;
+        }
+        .checkout-item {
+            display: flex;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .checkout-item img {
+            max-width: 80px;
+            margin-right: 20px;
+        }
+        .checkout-totals {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .checkout-totals p {
+            margin: 5px 0;
+        }
+        #payment-form {
+            margin-top: 20px;
+        }
+        #submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #submit:hover {
+            background-color: #555;
+        }
+        .contact-information {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .contact-information h3 {
+            margin-top: 0;
+        }
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .checkout-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .checkout-item img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="page-checkout">
