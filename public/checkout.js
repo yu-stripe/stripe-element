@@ -14,7 +14,7 @@ initialize();
 checkStatus();
 
 document
-  .querySelector("#c-form")
+  .querySelector("#payment-form")
   .addEventListener("submit", handleSubmit);
 
 
