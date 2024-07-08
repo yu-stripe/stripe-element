@@ -20,7 +20,7 @@ PAYPAY.Configure({
 
 router.post('/create-payment-intent', async (req, res, next) => {
   const paymentIntent = await stripe.paymentIntents.create({
-    amount: 19140,
+    amount: 930,
     currency: 'jpy',
     statement_descriptor: 'My Store',
     confirm: false,
@@ -38,7 +38,7 @@ router.post('/api/create-paypay', async (req, res, next) => {
   const paymentId = uuid.v4();
   const payload = {
     merchantPaymentId: paymentId,
-    amount: { "amount": 19140, "currency": "JPY" },
+    amount: { "amount": 930, "currency": "JPY" },
     codeType: 'ORDER_QR',
     orderItems: null,
     redirectUrl: 'https://stripe-element.onrender.com/',
