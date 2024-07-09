@@ -34,7 +34,12 @@ async function initialize() {
   elements = stripe.elements({ appearance, clientSecret, externalPaymentMethodTypes });
 
   const paymentElementOptions = {
-    layout: "tabs",
+    layout: {
+      type: 'accordion',
+      defaultCollapsed: false,
+      radios: false,
+      spacedAccordionItems: true
+    }
   };
 
   const paymentElement = elements.create("payment", paymentElementOptions);
