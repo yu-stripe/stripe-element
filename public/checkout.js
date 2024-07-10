@@ -40,7 +40,7 @@ async function initialize() {
       radios: false,
       spacedAccordionItems: true
     },
-    paymentMethodOrder: ['external_paypay', 'external_rakuten_pay', 'external_au_pay', 'external_dbarai', 'card']
+    paymentMethodOrder: ['external_paypay', 'external_rakuten_pay', 'external_au_pay', 'external_dbarai', 'apple_pay', 'google_pay','card']
   };
 
   const paymentElement = elements.create("payment", paymentElementOptions);
