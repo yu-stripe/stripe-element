@@ -39,7 +39,8 @@ async function initialize() {
       defaultCollapsed: false,
       radios: false,
       spacedAccordionItems: true
-    }
+    },
+    paymentMethodOrder: ['external_paypay', 'external_rakuten_pay', 'external_au_pay', 'external_dbarai', 'card']
   };
 
   const paymentElement = elements.create("payment", paymentElementOptions);
